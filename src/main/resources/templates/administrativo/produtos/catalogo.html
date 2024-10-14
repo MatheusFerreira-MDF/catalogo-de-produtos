@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Catálogo de Produtos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+        }
+        .container {
+            width: 90%;
+            margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .product {
+            background-color: #fff;
+            border: 1px solid #ddd; 
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            overflow: hidden;
+            width: calc(25% - 15px);
+            box-sizing: border-box;
+            cursor: pointer;
+            transition: box-shadow 0.3s;
+        }
+        .product:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+        }
+        .product-info {
+            padding: 10px; 
+        }
+        .product-info h2 {
+            margin: 0 0 5px; 
+            font-size: 1.1em; 
+        }
+        .product-info p {
+            margin: 0 0 10px; 
+            color: #555;
+            font-size: 0.9em; 
+        }
+        .product-info .price {
+            font-size: 1.2em; 
+            color: #333;
+        }
+        @media (max-width: 768px) {
+            .product {
+                width: calc(50% - 15px);
+            }
+        }
+        @media (max-width: 480px) {
+            .product {
+                width: 100%; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Catálogo de Produtos</h1>
+    </header>
+    <div class="container">
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="imagens/Xplus.png"/>
+            <div class="product-info">
+                <h2>Controle Remoto Xplus Sat</h2>
+                <p>Controle remoto para seu aparelho Xplus Sat!</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="imagens/GlobalSat.png">
+            <div class="product-info">
+                <h2>Controle Remoto GlobalSat GS-240</h2>
+                <p>Controle remoto para seu aparelho GlobalSat</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="imagens/Tv Box.png">
+            <div class="product-info">
+                <h2>Controle Remoto Tv Box</h2>
+                <p>Controle remoto para seu aparelho Tv Box</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="imagens/Azamerica.jpg">
+            <div class="product-info">
+                <h2>Controle Remoto Azamerica 1001</h2>
+                <p>Controle remoto para seu aparelho Azamerica 1001</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="imagens/Multilaser conversor.png">
+            <div class="product-info">
+                <h2>Controle Remoto Conversor Digital Multilaser</h2>
+                <p>Controle remoto para seu Conversor Multilaser</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="imagens/Samsung TV.jpg">
+            <div class="product-info">
+                <h2>Controle Remoto Tv Samsung</h2>
+                <p>Controle remoto para o seu televisor Samsung</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="imagens/LG Tv.jpg">
+            <div class="product-info">
+                <h2>Controle Remoto Tv LG</h2>
+                <p>Controle remoto para o seu televisor LG</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="imagens/Philco TV.jpg">
+            <div class="product-info">
+                <h2>Controle Remoto Tv Philco</h2>
+                <p>Controle remoto para o seu televisor Philco</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="imagens/Philco 4k.jpg">
+            <div class="product-info">
+                <h2>Controle Remoto Tv Philco 4k</h2>
+                <p>Controle remoto para o seu televisor Philco 4k</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="imagens/Samsung 4k.jpg">
+            <div class="product-info">
+                <h2>Controle Remoto Tv Samsung 4k</h2>
+                <p>Controle remoto para o seu televisor Samsung 4k</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="imagens/Samsung Prisma.jpg">
+            <div class="product-info">
+                <h2>Controle Remoto Tv Samsung Prisma</h2>
+                <p>Controle remoto para o seu televisor Samsung Prisma</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="imagens/Aoc smart.jpg">
+            <div class="product-info">
+                <h2>Controle Remoto Tv AOC smart</h2>
+                <p>Controle remoto para o seu televisor AOC smart</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="imagens/Aoc Roku.jpg">
+            <div class="product-info">
+                <h2>Controle Remoto Tv AOC Roku</h2>
+                <p>Controle remoto para o seu televisor AOC Roku</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="imagens/Jvc Smart.png">
+            <div class="product-info">
+                <h2>Controle Remoto Tv JVC Smart</h2>
+                <p>Controle remoto para o seu televisor JVC Smart</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="imagens/Sony Bravia.png">
+            <div class="product-info">
+                <h2>Controle Remoto Tv Sony Bravia</h2>
+                <p>Controle remoto para o seu televisor Sony Bravia</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="imagens/Lg Magic.jpg">
+            <div class="product-info">
+                <h2>Controle Remoto Tv LG Magic</h2>
+                <p>Controle remoto para o seu televisor LG</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="imagens/Cce.png">
+            <div class="product-info">
+                <h2>Controle Remoto Tv CCE</h2>
+                <p>Controle remoto para o seu televisor CCE</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="imagens/Cce Tubo.png">
+            <div class="product-info">
+                <h2>Controle Remoto Tv CCE Tubo</h2>
+                <p>Controle remoto para o seu televisor de tubo Cce</p>
+                <div class="price">R$ 19,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="imagens/Semp Toshiba Tubo.png">
+            <div class="product-info">
+                <h2>Controle Remoto Tv Semp Toshiba Tubo</h2>
+                <p>Controle remoto para o seu televisor de tubo Semp Toshiba</p>
+                <div class="price">R$ 19,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="imagens/Philco Tubo.png">
+            <div class="product-info">
+                <h2>Controle Remoto Tv Philco Tubo</h2>
+                <p>Controle remoto para o seu televisor de tubo Philco</p>
+                <div class="price">R$ 19,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="imagens/Phillips Tubo.png">
+            <div class="product-info">
+                <h2>Controle Remoto Tv Philips Tubo</h2>
+                <p>Controle remoto para o seu televisor de tubo Philips</p>
+                <div class="price">R$ 19,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="imagens/Philips Smart.png">
+            <div class="product-info">
+                <h2>Controle Remoto Tv Philips Smart</h2>
+                <p>Controle remoto para o seu televisor Philips</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="imagens/DuoSat.png">
+            <div class="product-info">
+                <h2>Controle Remoto DuoSat Wave</h2>
+                <p>Controle remoto para seu aparelho DuoSat Wave</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="imagens/DuoSat Joy.png">
+            <div class="product-info">
+                <h2>Controle Remoto DuoSat Joy</h2>
+                <p>Controle remoto para seu aparelho DuoSat Joy</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="imagens/DuoSat Trend.png">
+            <div class="product-info">
+                <h2>Controle Remoto DuoSat Trend HD</h2>
+                <p>Controle remoto para seu aparelho DuoSat Trend HD</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="imagens/OI TV.jpg">
+            <div class="product-info">
+                <h2>Controle Remoto Oi Tv</h2>
+                <p>Controle remoto para seu aparelho Oi Tv</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="imagens/Oi Elsys.png">
+            <div class="product-info">
+                <h2>Controle Remoto Oi Elsys</h2>
+                <p>Controle remoto para seu aparelho Oi Elsys</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="imagens/Elsys.png">
+            <div class="product-info">
+                <h2>Controle Remoto Elsys</h2>
+                <p>Controle remoto para seu aparelho Elsys</p>
+                <div class="price">R$ 19,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="imagens/Tcl P.png">
+            <div class="product-info">
+                <h2>Controle Remoto Tv Tcl Smart</h2>
+                <p>Controle remoto para o seu televisor Tcl Smart</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="imagens/Tcl G.jpg">
+            <div class="product-info">
+                <h2>Controle Remoto Tv Tcl Smart</h2>
+                <p>Controle remoto para o seu televisor Tcl Smart</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="imagens/Mondial.png">
+            <div class="product-info">
+                <h2>Controle Remoto DVD Mondial</h2>
+                <p>Controle remoto para o seu aparelho de DVD Mondial</p>
+                <div class="price">R$ 19,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="imagens/Multilaser TV.png">
+            <div class="product-info">
+                <h2>Controle Remoto Tv Multilaser Smart</h2>
+                <p>Controle remoto para o seu televisor Multilaser Smart</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+            <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="imagens/V8.png">
+            <div class="product-info">
+                <h2>Cabo de dados entrada V8</h2>
+                <p>Cabo de dados entrada V8 para seu aparelho</p>
+                <div class="price">R$ 14,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="imagens/Tipo C.jpg">
+            <div class="product-info">
+                <h2>Cabo de dados entrada Tipo C</h2>
+                <p>Cabo de dados entrada Tipo C para seu aparelho</p>
+                <div class="price">R$ 14,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="imagens/Iphone.jpg">
+            <div class="product-info">
+                <h2>Cabo de dados entrada Lightning Iphone</h2>
+                <p>Cabo de dados entrada Lightning para seu aparelho </p>
+                <div class="price">R$ 18,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="imagens/Carregador V8.jpg">
+            <div class="product-info">
+                <h2>Carregador entrada V8</h2>
+                <p>Carregador entrada V8</p>
+                <div class="price">R$ 14,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="imagens/Carregador Tipo C.jpg">
+            <div class="product-info">
+                <h2>Carregador entrada Tipo C</h2>
+                <p>Carregador entrada Tipo C</p>
+                <div class="price">R$ 18,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="imagens/Carregador Iphone.png">
+            <div class="product-info">
+                <h2>Carregador entrada Lightning Iphone</h2>
+                <p>Carregador entrada Lightning Iphone</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+            <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="imagens/Luminária.png">
+            <div class="product-info">
+                <h2>Luminária de cabeceira/carregador por indução</h2>
+                <p>Carregue seu telefone com a luminária/carregador por indução</p>
+                <div class="price">R$ 99,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="imagens/Estação Retrabalho.jpg">
+            <div class="product-info">
+                <h2>Máquina Retrabalho Knupp</h2>
+                <p>Estação de solda/Retrabalho Knupp</p>
+                <div class="price">R$ 499,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="imagens/processador.png">
+            <div class="product-info">
+                <h2>Processador de Alimentos Manual 500ML</h2>
+                <p>Procesador de alimentos manual de 500ML</p>
+                <div class="price">R$ 14,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="https://th.bing.com/th/id/OIP.tLiF0pqMe2QMWzdyOI4SfwHaE8?rs=1&pid=ImgDetMain" alt="Controle Remoto">
+            <div class="product-info">
+                <h2>Controle Remoto</h2>
+                <p>Controle remoto para seu aparelho...</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="https://th.bing.com/th/id/OIP.tLiF0pqMe2QMWzdyOI4SfwHaE8?rs=1&pid=ImgDetMain" alt="Controle Remoto">
+            <div class="product-info">
+                <h2>Controle Remoto</h2>
+                <p>Controle remoto para seu aparelho...</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="https://th.bing.com/th/id/OIP.tLiF0pqMe2QMWzdyOI4SfwHaE8?rs=1&pid=ImgDetMain" alt="Controle Remoto">
+            <div class="product-info">
+                <h2>Controle Remoto</h2>
+                <p>Controle remoto para seu aparelho...</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="https://th.bing.com/th/id/OIP.tLiF0pqMe2QMWzdyOI4SfwHaE8?rs=1&pid=ImgDetMain" alt="Controle Remoto">
+            <div class="product-info">
+                <h2>Controle Remoto</h2>
+                <p>Controle remoto para seu aparelho...</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="https://th.bing.com/th/id/OIP.tLiF0pqMe2QMWzdyOI4SfwHaE8?rs=1&pid=ImgDetMain" alt="Controle Remoto">
+            <div class="product-info">
+                <h2>Controle Remoto</h2>
+                <p>Controle remoto para seu aparelho...</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="https://th.bing.com/th/id/OIP.tLiF0pqMe2QMWzdyOI4SfwHaE8?rs=1&pid=ImgDetMain" alt="Controle Remoto">
+            <div class="product-info">
+                <h2>Controle Remoto</h2>
+                <p>Controle remoto para seu aparelho...</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="https://th.bing.com/th/id/OIP.tLiF0pqMe2QMWzdyOI4SfwHaE8?rs=1&pid=ImgDetMain" alt="Controle Remoto">
+            <div class="product-info">
+                <h2>Controle Remoto</h2>
+                <p>Controle remoto para seu aparelho...</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="https://th.bing.com/th/id/OIP.tLiF0pqMe2QMWzdyOI4SfwHaE8?rs=1&pid=ImgDetMain" alt="Controle Remoto">
+            <div class="product-info">
+                <h2>Controle Remoto</h2>
+                <p>Controle remoto para seu aparelho...</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="https://th.bing.com/th/id/OIP.tLiF0pqMe2QMWzdyOI4SfwHaE8?rs=1&pid=ImgDetMain" alt="Controle Remoto">
+            <div class="product-info">
+                <h2>Controle Remoto</h2>
+                <p>Controle remoto para seu aparelho...</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="https://th.bing.com/th/id/OIP.tLiF0pqMe2QMWzdyOI4SfwHaE8?rs=1&pid=ImgDetMain" alt="Controle Remoto">
+            <div class="product-info">
+                <h2>Controle Remoto</h2>
+                <p>Controle remoto para seu aparelho...</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="https://th.bing.com/th/id/OIP.tLiF0pqMe2QMWzdyOI4SfwHaE8?rs=1&pid=ImgDetMain" alt="Controle Remoto">
+            <div class="product-info">
+                <h2>Controle Remoto</h2>
+                <p>Controle remoto para seu aparelho...</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="https://th.bing.com/th/id/OIP.tLiF0pqMe2QMWzdyOI4SfwHaE8?rs=1&pid=ImgDetMain" alt="Controle Remoto">
+            <div class="product-info">
+                <h2>Controle Remoto</h2>
+                <p>Controle remoto para seu aparelho...</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="https://th.bing.com/th/id/OIP.tLiF0pqMe2QMWzdyOI4SfwHaE8?rs=1&pid=ImgDetMain" alt="Controle Remoto">
+            <div class="product-info">
+                <h2>Controle Remoto</h2>
+                <p>Controle remoto para seu aparelho...</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="https://th.bing.com/th/id/OIP.tLiF0pqMe2QMWzdyOI4SfwHaE8?rs=1&pid=ImgDetMain" alt="Controle Remoto">
+            <div class="product-info">
+                <h2>Controle Remoto</h2>
+                <p>Controle remoto para seu aparelho...</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="https://th.bing.com/th/id/OIP.tLiF0pqMe2QMWzdyOI4SfwHaE8?rs=1&pid=ImgDetMain" alt="Controle Remoto">
+            <div class="product-info">
+                <h2>Controle Remoto</h2>
+                <p>Controle remoto para seu aparelho...</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="https://th.bing.com/th/id/OIP.tLiF0pqMe2QMWzdyOI4SfwHaE8?rs=1&pid=ImgDetMain" alt="Controle Remoto">
+            <div class="product-info">
+                <h2>Controle Remoto</h2>
+                <p>Controle remoto para seu aparelho...</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="https://th.bing.com/th/id/OIP.tLiF0pqMe2QMWzdyOI4SfwHaE8?rs=1&pid=ImgDetMain" alt="Controle Remoto">
+            <div class="product-info">
+                <h2>Controle Remoto</h2>
+                <p>Controle remoto para seu aparelho...</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="https://th.bing.com/th/id/OIP.tLiF0pqMe2QMWzdyOI4SfwHaE8?rs=1&pid=ImgDetMain" alt="Controle Remoto">
+            <div class="product-info">
+                <h2>Controle Remoto</h2>
+                <p>Controle remoto para seu aparelho...</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="https://th.bing.com/th/id/OIP.tLiF0pqMe2QMWzdyOI4SfwHaE8?rs=1&pid=ImgDetMain" alt="Controle Remoto">
+            <div class="product-info">
+                <h2>Controle Remoto</h2>
+                <p>Controle remoto para seu aparelho...</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="https://th.bing.com/th/id/OIP.tLiF0pqMe2QMWzdyOI4SfwHaE8?rs=1&pid=ImgDetMain" alt="Controle Remoto">
+            <div class="product-info">
+                <h2>Controle Remoto</h2>
+                <p>Controle remoto para seu aparelho...</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="https://th.bing.com/th/id/OIP.tLiF0pqMe2QMWzdyOI4SfwHaE8?rs=1&pid=ImgDetMain" alt="Controle Remoto">
+            <div class="product-info">
+                <h2>Controle Remoto</h2>
+                <p>Controle remoto para seu aparelho...</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="https://th.bing.com/th/id/OIP.tLiF0pqMe2QMWzdyOI4SfwHaE8?rs=1&pid=ImgDetMain" alt="Controle Remoto">
+            <div class="product-info">
+                <h2>Controle Remoto</h2>
+                <p>Controle remoto para seu aparelho...</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Controle Remoto', 'Controle Remoto para seu aparelho', 'R$ 24,99')">
+            <img src="https://th.bing.com/th/id/OIP.tLiF0pqMe2QMWzdyOI4SfwHaE8?rs=1&pid=ImgDetMain" alt="Controle Remoto">
+            <div class="product-info">
+                <h2>Controle Remoto</h2>
+                <p>Controle remoto para seu aparelho...</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <img src="https://imagensemoldes.com.br/wp-content/uploads/2020/05/Logo-Lobo-PNG.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        
+            <a class="navbar-brand" href="#">MABI</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+            </li>
+            <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(página atual)</span></a>
+                </li>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Pesquisar</button>
+        </form>
+        </div>
+        </ul>
+        </nav>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>    
+    <script>
+        function showProductDetails(name, description, price) {
+            alert('Nome: ' + name + '\nDescrição: ' + description + '\nPreço: ' + price);
+        }
+    </script>
+</body>
+</html>
