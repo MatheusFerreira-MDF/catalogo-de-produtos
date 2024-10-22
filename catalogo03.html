@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catálogo de produtos com controles remotos para diversos aparelhos.">
+    <title>Catálogo de Produtos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagens/logo.jpeg" type="logo">
+</head>
+
+<body>
+    <header>
+        <h1>Catálogo de Produtos</h1>
+        <img  class="imagem" src="imagens/logo.jpeg" alt="imagem de um robo">
+    </header>
+    <div class="container">
+        <div class="product" onclick="showProductDetails('Luminária de Mesa', 'Luminária de mesa', 'R$ 24,99')">
+            <img src="imagens/luminária de mesa.jpeg" alt="Luminária de Mesa"/>
+            <div class="product-info">
+                <h2>Luminária de Mesa</h2>
+                <p>Luminária de mesa</p>
+                <div class="price">R$ 68,00</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Garrafa Térmica', 'Garrafa térmica', 'R$ 24,99')">
+            <img src="imagens/garrafa térmica.jpeg" alt="Garrafa Térmica">
+            <div class="product-info">
+                <h2>Garrafa Térmica</h2>
+                <p>Garrafa térmica</p>
+                <div class="price">R$ 32,90</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Luminária', 'Luminária', 'R$ 24,99')">
+            <img src="imagens/Luminária.png" alt="Luminária">
+            <div class="product-info">
+                <h2>Luminária</h2>
+                <p>Luminária</p>
+                <div class="price">R$ 32,00</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Mini Wireless', 'Mini wireless', 'R$ 24,99')">
+            <img src="imagens/mini wireless.jpeg" alt="Mini Wireless">
+            <div class="product-info">
+                <h2>Mini Wireless</h2>
+                <p>Mini wireless</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Lâmpada LED', 'Lâmpada LED', 'R$ 24,99')">
+            <img src="imagens/lampada led.jpeg" alt="Lâmpada LED">
+            <div class="product-info">
+                <h2>Lâmpada LED</h2>
+                <p>Lâmpada LED</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Smart Camera', 'Smart camera', 'R$ 24,99')">
+            <img src="imagens/smart camera.jpeg" alt="Smart Camera">
+            <div class="product-info">
+                <h2>Smart Camera</h2>
+                <p>Smart camera</p>
+                <div class="price">R$ 60,00</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Mini Camera', 'Mini camera', 'R$ 24,99')">
+            <img src="imagens/mini camera.jpeg" alt="Mini Camera">
+            <div class="product-info">
+                <h2>Mini Camera</h2>
+                <p>Mini camera</p>
+                <div class="price">R$ 45,90</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Mini Ventilador', 'Mini ventilador', 'R$ 24,99')">
+            <img src="imagens/mini ventilador.jpeg" alt="Mini Ventilador">
+            <div class="product-info">
+                <h2>Mini Ventilador</h2>
+                <p>Mini ventilador</p>
+                <div class="price">R$ 21,50</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Pop Socket', 'Pop socket', 'R$ 24,99')">
+            <img src="imagens/pop socket.jpeg" alt="Pop Socket">
+            <div class="product-info">
+                <h2>Pop Socket</h2>
+                <p>Pop socket</p>
+                <div class="price">R$ 24,99</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Teclado Keyboard', 'Teclado keyboard', 'R$ 24,99')">
+            <img src="imagens/teclado keyboard.jpeg" alt="Teclado Keyboard">
+            <div class="product-info">
+                <h2>Teclado Keyboard</h2>
+                <p>Teclado keyboard</p>
+                <div class="price">R$ 65,00</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Teclado Wireless', 'Teclado wireless', 'R$ 24,99')">
+            <img src="imagens/teclado wireless.jpeg" alt="Teclado Wireless">
+            <div class="product-info">
+                <h2>Teclado Wireless</h2>
+                <p>Teclado wireless</p>
+                <div class="price">R$ 63,90</div>
+            </div>
+        </div>
+        <div class="product" onclick="showProductDetails('Processador', 'Processador', 'R$ 24,99')">
+            <img src="imagens/processador.png" alt="Processador">
+            <div class="product-info">
+                <h2>Processador</h2>
+                <p>Processador</p>
+                <div class="price">R$ 22,90</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="botoes">
+        <a class="botao" href="catalogo02.html">Página anterior</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Catálogo de Produtos. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        function showProductDetails(title, description, price) {
+            alert(`Produto: ${title}\nDescrição: ${description}\nPreço: ${price}`);
+        }
+    </script>
+</body>
+</html>
